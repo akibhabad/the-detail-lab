@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function HomePage() {
   const slides = [
@@ -7,6 +8,29 @@ function HomePage() {
     { src: "/images/IMG_2760.JPG", alt: "Car detailing service 3" },
     { src: "/images/IMG_2790.JPG", alt: "Car detailing service 4" }
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance slides every 2.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   return (
     <div className="home-page gradient-bg">
@@ -23,7 +47,7 @@ function HomePage() {
           <div className="slideshow-container">
             <div className="slideshow-placeholder">
               {slides.map((slide, index) => (
-                <div key={index} className={`slide-placeholder ${index === 0 ? 'active' : ''}`}>
+                <div key={index} className={`slide-placeholder ${index === currentSlide ? 'active' : ''}`}>
                   <img 
                     src={slide.src} 
                     alt={slide.alt}
@@ -39,13 +63,17 @@ function HomePage() {
               ))}
             </div>
             <div className="slideshow-controls">
-              <button className="slide-btn prev-btn">‹</button>
+              <button className="slide-btn prev-btn" onClick={prevSlide}>‹</button>
               <div className="slide-indicators">
                 {slides.map((_, index) => (
-                  <span key={index} className={`indicator ${index === 0 ? 'active' : ''}`}></span>
+                  <span 
+                    key={index} 
+                    className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                    onClick={() => goToSlide(index)}
+                  ></span>
                 ))}
               </div>
-              <button className="slide-btn next-btn">›</button>
+              <button className="slide-btn next-btn" onClick={nextSlide}>›</button>
             </div>
           </div>
         </div>

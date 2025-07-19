@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   const slides = [
-    { src: "/IMG_2708.JPG", alt: "Car detailing service 1" },
+    { src: "/images/IMG_2708.JPG", alt: "Car detailing service 1" },
     { src: "/images/IMG_2739.JPG", alt: "Car detailing service 2" },
     { src: "/images/IMG_2760.JPG", alt: "Car detailing service 3" },
     { src: "/images/IMG_2790.JPG", alt: "Car detailing service 4" }

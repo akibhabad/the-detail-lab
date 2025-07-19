@@ -71,7 +71,7 @@ function ServicesPage() {
   return (
     <div className="services-page">
       <div className="container">
-        <h1>Detail Lab — Professional Mobile Detailing</h1>
+        <h1>FG Mobile Detailing — Professional Mobile Detailing</h1>
         <p className="page-intro">
           Professional mobile car detailing services designed to keep your vehicle looking its best.
           <br />

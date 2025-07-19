@@ -81,7 +81,7 @@ function HomePage() {
       
       <section className="intro">
         <div className="container">
-          <h2>Why Choose The Detail Lab?</h2>
+          <h2>Why Choose FG Mobile Detailing?</h2>
           <p>We provide top-quality mobile car detailing services using premium products and professional techniques. Our experienced team ensures your vehicle looks its absolute best.</p>
         </div>
       </section>

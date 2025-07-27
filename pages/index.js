@@ -19,8 +19,8 @@ export default function Home() {
           </video>
           <div className="video-overlay"></div>
         </div>
-        <div className="hero-content" style={{ textAlign: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2 }}>
-          <h1 style={{ color: '#023e8a', fontSize: '4rem', fontWeight: 'bold', marginBottom: '3rem' }}>The Detail Lab</h1>
+        <div className="hero-content">
+          <h1 className="hero-title">The Detail Lab</h1>
           <Link href="/contact" className="cta-button">Book Now</Link>
         </div>
         <div className="scroll-indicator">

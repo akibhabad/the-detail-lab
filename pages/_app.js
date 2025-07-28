@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Navbar from '../components/Navbar'
+import { Analytics } from '@vercel/analytics/next'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -8,6 +9,7 @@ export default function App({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
+      <Analytics />
     </div>
   )
 }

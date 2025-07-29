@@ -33,6 +33,12 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
+      "page": "/contacted",
+      "regex": "^/contacted(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contacted(?:/)?$"
+    },
+    {
       "page": "/services",
       "regex": "^/services(?:/)?$",
       "routeKeys": {},

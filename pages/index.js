@@ -22,6 +22,9 @@ export default function Home() {
         <div className="hero-content">
           <h1 className="hero-title">The Detail Lab</h1>
           <Link href="/contact" className="cta-button">Book Now</Link>
+          <div className="compelling-copy">
+            <h2 className="copy-text">Serving all over CT — We come to you for complete-package auto detailing.</h2>
+          </div>
         </div>
         <div className="scroll-indicator">
           <div className="arrow-down"></div>

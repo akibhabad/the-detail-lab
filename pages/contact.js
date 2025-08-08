@@ -78,7 +78,7 @@ function ContactPage() {
           <div className="contact-form">
             <form action="https://formsubmit.co/akibhabad7@gmail.com" method="POST">
               <input type="hidden" name="_cc" value="efagin19@gmail.com" />
-              <input type="hidden" name="_subject" value="New Contact Form Submission - FG Mobile Detailing" />
+              <input type="hidden" name="_subject" value={`Contact from ${formData.town} - Detail Lab`} />
               <input type="hidden" name="_next" value={redirectUrl} />
               <input type="hidden" name="_captcha" value="false" />
               

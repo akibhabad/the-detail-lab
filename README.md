@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# Detail Lab - Mobile Auto Detailing Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for Detail Lab's mobile auto detailing services in Connecticut. Built with Next.js 14+, TypeScript, Tailwind CSS, and shadcn/ui components.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Mobile-First Design**: Optimized for all devices with responsive layout
+- **Performance Optimized**: Fast loading with optimized images and code splitting
+- **SEO Friendly**: Structured data, meta tags, and sitemap for search engines
+- **Accessible**: WCAG compliant with proper semantic HTML and ARIA labels
+- **Modern Stack**: Next.js 14 App Router, TypeScript, Tailwind CSS, shadcn/ui
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: shadcn/ui + custom components
+- **Fonts**: Inter (body) + Sora (headings) from Google Fonts
+- **Icons**: Lucide React
+- **Forms**: Custom form handling with validation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📱 Pages
 
-### `npm test`
+- **Home (/)**: Hero video, services overview, before/after gallery, process steps, owner bio
+- **Services (/services)**: Detailed pricing, image galleries, equipment information
+- **Contact (/contact)**: Contact form, direct contact info, FAQ, service area map
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Design System
 
-### `npm run build`
+### Colors (CSS Variables)
+- **Primary**: `hsl(211 100% 27%)` - Detail Lab blue
+- **Background**: `hsl(0 0% 0%)` - Black
+- **Foreground**: `hsl(0 0% 100%)` - White
+- **Muted**: `hsl(0 0% 11%)` - Dark gray
+- **Accent**: Primary blue for highlights
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Typography
+- **Headings**: Sora font family
+- **Body**: Inter font family
+- **Scale**: xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Spacing
+8pt grid system: 4, 8, 12, 16, 24, 32, 48, 64px
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+├── app/                    # Next.js 14 App Router
+│   ├── globals.css        # Global styles and Tailwind
+│   ├── layout.tsx         # Root layout with metadata
+│   ├── page.tsx           # Home page
+│   ├── loading.tsx        # Loading UI
+│   ├── not-found.tsx      # 404 page
+│   ├── services/          # Services page
+│   ├── contact/           # Contact page
+│   ├── sitemap.ts         # XML sitemap
+│   ├── robots.ts          # Robots.txt
+│   └── manifest.ts        # Web app manifest
+├── components/            # React components
+│   ├── ui/               # shadcn/ui base components
+│   ├── navbar.tsx        # Site navigation
+│   ├── hero-video.tsx    # Video hero section
+│   ├── pricing-card.tsx  # Service pricing cards
+│   └── ...               # Other custom components
+├── data/                 # Data and content
+│   └── services.ts       # Pricing, services, contact info
+├── lib/                  # Utilities
+│   └── utils.ts          # Tailwind class merging
+└── public/               # Static assets
+    ├── images/           # Photos and logos
+    └── videos/           # Hero video
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Updating Services & Pricing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Edit `/data/services.ts` to modify:
+- Service prices and descriptions
+- Contact information
+- Equipment lists
+- Image paths
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Adding Images
 
-## Learn More
+1. Add images to `/public/images/`
+2. Update image references in `/data/services.ts`
+3. Ensure proper alt text for accessibility
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### SEO Configuration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Metadata is configured in each page's `metadata` export
+- JSON-LD structured data is in `app/layout.tsx`
+- Update base URL in `app/sitemap.ts` and schema data
 
-### Code Splitting
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Install dependencies
+npm install
 
-### Analyzing the Bundle Size
+# Run development server
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Build for production
+npm run build
 
-### Making a Progressive Web App
+# Start production server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Run linting
+npm run lint
+```
 
-### Advanced Configuration
+## 📊 Performance Targets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Performance**: ≥95 (Lighthouse)
+- **Accessibility**: ≥95 (Lighthouse)
+- **Best Practices**: ≥95 (Lighthouse)
+- **SEO**: ≥95 (Lighthouse)
 
-### Deployment
+## 🔍 SEO Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Semantic HTML structure
+- Open Graph and Twitter Card meta tags
+- JSON-LD structured data for LocalBusiness
+- XML sitemap and robots.txt
+- Optimized images with proper alt text
+- Fast loading and Core Web Vitals optimization
 
-### `npm run build` fails to minify
+## 📞 Contact Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Current Contact Details:**
+- Phone: (860) 560-6294
+- Email: efagin19@gmail.com, akibhabad7@gmail.com
+- Service Area: Greater Hartford Area, Connecticut
+- Response Time: <24 hours
+
+## 🔄 Future Enhancements
+
+- Online booking calendar integration
+- Customer testimonials section
+- Blog for SEO and customer education
+- Gallery with before/after comparisons
+- Service area expansion tracking
+
+## 📝 License
+
+Private project for Detail Lab mobile auto detailing service.

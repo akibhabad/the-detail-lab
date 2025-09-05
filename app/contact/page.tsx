@@ -154,8 +154,7 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-2">Do I need to provide water or electricity?</h3>
                 <p className="text-sm text-muted-foreground">
-                  We bring our own water and equipment. We only need access to a standard 
-                  electrical outlet for some of our tools.
+                  Yes, we need access to a hose outlet for exterior detailing, and access to a standard electrical outlet for some of our tools for both interior and exterior detailing.
                 </p>
               </CardContent>
             </Card>
@@ -164,8 +163,7 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-2">What if it's raining?</h3>
                 <p className="text-sm text-muted-foreground">
-                  We can perform interior details in any weather. For exterior work, 
-                  we'll reschedule if conditions aren't suitable.
+                  We'll reschedule if conditions aren't suitable.
                 </p>
               </CardContent>
             </Card>

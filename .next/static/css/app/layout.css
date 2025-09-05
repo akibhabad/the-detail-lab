@@ -704,9 +704,6 @@ h1, h2, h3, h4, h5, h6{
 .max-w-4xl{
   max-width: 56rem;
 }
-.max-w-6xl{
-  max-width: 72rem;
-}
 .max-w-full{
   max-width: 100%;
 }

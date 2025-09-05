@@ -43,7 +43,7 @@ export default function ImageGallery({ images, className }: ImageGalleryProps) {
   return (
     <>
       {/* Gallery Grid */}
-      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ${className}`}>
+      <div className={`grid gap-4 ${images.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'} ${className}`}>
         {images.map((image, index) => (
           <div
             key={index}
